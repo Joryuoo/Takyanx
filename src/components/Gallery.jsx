@@ -1,36 +1,37 @@
-import banner from '../assets/img/finalist-banner.webp'
-import levelup from '../assets/img/graffiti-levelup.webp'
-import wildcats from '../assets/img/graffiti-wildcats.webp'
-import dost from '../assets/img/graffiti-dost.webp'
+import localPlay from '../assets/img/screens/local-play.webp'
+import bato from '../assets/img/screens/bato-bato-pik.webp'
+import thanks from '../assets/img/screens/special-thanks.webp'
 
-const TAGS = [
-  { src: levelup, alt: 'Level Up graffiti tag' },
-  { src: wildcats, alt: 'Wildcats graffiti tag' },
-  { src: dost, alt: 'DOST graffiti tag' },
+const SHOTS = [
+  {
+    src: localPlay,
+    alt: 'Room setup screen: pick one vs one or free for all, set the match timer, and invite players on the same Wi-Fi',
+    caption: 'Set up a room',
+  },
+  {
+    src: bato,
+    alt: 'Bato Bato Pik, a rock-paper-scissors showdown between host and player',
+    caption: 'Bato Bato Pik decides who serves',
+  },
+  {
+    src: thanks,
+    alt: 'Special thanks credits screen with the Takyan X logo',
+    caption: 'Hand-painted, cardboard-and-crayon look',
+  },
 ]
 
 export default function Gallery() {
   return (
-    <section className="section" id="gallery">
-      <h2 className="section__title">Street art from the game</h2>
-      <p className="section__lead">
-        Takyan X ships with hand-painted graffiti and a cardboard-and-crayon look.
-      </p>
-      <div className="gallery">
-        {TAGS.map((t) => (
-          <img key={t.alt} src={t.src} alt={t.alt} loading="lazy" />
+    <section className="section" id="in-game">
+      <h2 className="section__title">In the game</h2>
+      <div className="shots">
+        {SHOTS.map((s) => (
+          <figure className="shot" key={s.caption}>
+            <img src={s.src} alt={s.alt} loading="lazy" />
+            <figcaption>{s.caption}</figcaption>
+          </figure>
         ))}
       </div>
-      <figure className="finalist">
-        <img
-          src={banner}
-          alt="Takyan X by The Interns, Level Up 3.0 Esports Game Dev Challenge finalist, student category"
-          loading="lazy"
-        />
-        <figcaption>
-          Finalist, Level Up 3.0 Esports Game Dev Challenge (Student Category)
-        </figcaption>
-      </figure>
     </section>
   )
 }

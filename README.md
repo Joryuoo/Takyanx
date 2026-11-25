@@ -8,16 +8,13 @@ Frontend-only site (Vite + React) for Takyan X: a QR code and download links for
     npm run dev       # local dev server
     npm run build     # production build in dist/
 
-## Point it at the real builds
+## Download link
 
-The game files are too large to bundle (APK ~1 GB, Windows ~580 MB). Host them
-(e.g. GitHub Releases) and set the URLs in `src/config.js`, or via `.env.local`:
-
-    VITE_APK_URL=https://...
-    VITE_WINDOWS_URL=https://...
-    VITE_QR_TARGET=https://...   # optional, defaults to the APK URL
+The APK (~1 GB) is not bundled. It is shared only through the QR code and a Drive link.
+Replace the placeholder in `src/config.js` (or set `VITE_APK_DRIVE_URL` in `.env.local`).
+The QR code encodes the same link unless `VITE_QR_TARGET` is set.
 
 ## Assets
 
-Art and fonts come from the game project (`../Takyanx/Assets`).
+Art and fonts come from the game project (`../Takyanx/Assets`). Screen images in `src/assets/img/screens` and the team credits are exported from the game's Figma UI boards.
 `npm run assets` re-generates the web-sized images in `src/assets/img`.

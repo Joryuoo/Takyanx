@@ -10,15 +10,24 @@ export default function Downloads() {
       </p>
       <div className="cards">
         {Object.entries(DOWNLOADS).map(([key, d]) => (
-          <article className="card" key={key}>
-            <h3>{d.label}</h3>
-            <p className="card__meta">
-              {d.file} · {d.size}
-            </p>
-            <p className="card__note">{d.note}</p>
-            <a className="btn btn--primary" href={d.url} download>
-              Download for {d.label}
-            </a>
+          <article className="panel panel--narrow" key={key}>
+            <header className="panel__head">
+              <h3>{d.label}</h3>
+            </header>
+            <div className="panel__body">
+              <p className="card__meta">
+                {d.file} · {d.size}
+              </p>
+              <p className="card__note">{d.note}</p>
+              <a
+                className="btn btn--play"
+                href={d.url}
+                target="_blank"
+                rel="noreferrer"
+              >
+                Download from Drive
+              </a>
+            </div>
           </article>
         ))}
       </div>

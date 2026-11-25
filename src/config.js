@@ -1,33 +1,26 @@
-// Single place to point the site at the real builds.
-// The game builds are huge (APK ~1 GB, Windows ~580 MB), so they are NOT bundled
-// into this site. Host them (GitHub Releases, Drive, S3...) and paste the URLs here.
-// Override per-environment with VITE_* variables, e.g. in .env.local.
+// Single place to point the site at the real build.
+// The APK is huge (~1 GB), so it is NOT bundled into this site. It is shared only
+// through the QR code and a Drive link.
+//
+// TODO: replace the placeholder below with the real Google Drive link, or set
+// VITE_APK_DRIVE_URL in .env.local.
 
 const env = import.meta.env
+
+export const APK_DRIVE_URL =
+  env.VITE_APK_DRIVE_URL || 'https://drive.google.com/PLACEHOLDER-takyanx-apk'
 
 export const DOWNLOADS = {
   android: {
     label: 'Android',
     file: 'TakyanX.apk',
     size: '~1 GB',
-    note: 'Android 8+ · allow "install unknown apps" when prompted',
-    url:
-      env.VITE_APK_URL ||
-      'https://github.com/Tech-Wrightttt/Takyan_X/releases/latest/download/TakyanX.apk',
-  },
-  windows: {
-    label: 'Windows',
-    file: 'TakyanX-Windows.exe',
-    size: '~580 MB',
-    note: 'Windows 10 / 11 · 64-bit',
-    url:
-      env.VITE_WINDOWS_URL ||
-      'https://github.com/Tech-Wrightttt/Takyan_X/releases/latest/download/TakyanX-Windows.exe',
+    note: 'Opens Google Drive. Allow "install unknown apps" when prompted.',
+    url: APK_DRIVE_URL,
   },
 }
 
-// What the QR code encodes. Defaults to the direct Android download so a phone
-// scan starts the install; set VITE_QR_TARGET to the site URL if you prefer.
-export const QR_TARGET = env.VITE_QR_TARGET || DOWNLOADS.android.url
+// What the QR code encodes. Same Drive link by default.
+export const QR_TARGET = env.VITE_QR_TARGET || APK_DRIVE_URL
 
 export const REPO_URL = 'https://github.com/Tech-Wrightttt/Takyan_X'

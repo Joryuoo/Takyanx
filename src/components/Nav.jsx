@@ -9,7 +9,8 @@ export default function Nav() {
         <a href="#scan">Scan</a>
         <a href="#download">Download</a>
         <a href="#about">About</a>
-        <a href="#gallery">Art</a>
+        <a href="#in-game">In game</a>
+        <a href="#team">Team</a>
       </nav>
     </header>
   )

@@ -10,11 +10,6 @@ const jobs = [
   ['Blue Takyan.png', 'takyan-blue.webp', 700],
   ['TakyanX_Banner.png', 'finalist-banner.webp', 1100],
   ['Graffiti/The Interns.png', 'graffiti-interns.webp', 1000],
-  ['Graffiti/Level Up.png', 'graffiti-levelup.webp', 1000],
-  ['Graffiti/Wildcats.png', 'graffiti-wildcats.webp', 1000],
-  ['Graffiti/dost7.png', 'graffiti-dost.webp', 1000],
-  ['moutain2.png', 'mountains.webp', 1600],
-  ['city bg.png', 'city.webp', 1920],
 ]
 
 for (const [src, dest, width] of jobs) {
