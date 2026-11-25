@@ -15,7 +15,7 @@ export default function Team() {
     <section className="section" id="team">
       <h2 className="section__title">The Interns</h2>
       <p className="tag">
-        <span className="tag__label">Made at</span> Cebu Institute of Technology – University
+        <span className="tag__label">Honed at</span> Cebu Institute of Technology – University
       </p>
       <ul className="pennants">
         {TEAM.map((m) => (
