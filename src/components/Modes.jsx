@@ -53,8 +53,8 @@ export default function Modes() {
                 <img className="character__hover" src={m.art.hover} alt="" aria-hidden="true" loading="lazy" />
               </div>
             </div>
-            <div className="panel">
-              <header className={`panel__head panel__head--${m.tone}`}>
+            <div className={`panel panel--${m.tone}`}>
+              <header className={`panel__head`}>
                 <h3>{m.name}</h3>
               </header>
               <div className="panel__body">
