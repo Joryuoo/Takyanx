@@ -5,6 +5,7 @@ import Downloads from './components/Downloads'
 import About from './components/About'
 import Gallery from './components/Gallery'
 import Modes from './components/Modes'
+import Skills from './components/Skills'
 import Team from './components/Team'
 import Footer from './components/Footer'
 
@@ -17,6 +18,7 @@ export default function App() {
         <QrSection />
         <Downloads />
         <Modes />
+        <Skills />
         <About />
         <Gallery />
         <Team />

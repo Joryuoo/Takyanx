@@ -112,6 +112,8 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 400; line-height: 1.
 .section__title { font-size: clamp(2rem, 5vw, 3rem); text-align: center; color: #fff; text-shadow: 3px 3px 0 var(--brown); }
 .section__lead { text-align: center; color: var(--brown-dark); max-width: 52ch; margin: 0 auto 28px; }
 
+.cards { display: flex; flex-wrap: wrap; gap: 24px; justify-content: center; }
+
 /* Cloth patch: the wobbly stitched card from the Figma board, recoloured per card with --patch.
    White edge = the card itself, colour = ::before inset 4px, stitching = ::after inset 16px,
    so the stitching sits the same distance from the edge on every side at any card size. */
@@ -238,3 +240,58 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 400; line-height: 1.
 @media (max-width: 640px) {
   .thanks { grid-template-columns: 1fr; grid-template-areas: "title" "photo" "text"; justify-items: center; text-align: center; }
 }
+
+/* Phones */
+@media (max-width: 560px) {
+  body { font-size: 1.02rem; }
+  .section { padding: 44px 12px 0; }
+  .section__title { font-size: 2rem; }
+  .section__lead { font-size: 1rem; margin-bottom: 20px; }
+
+  .hero { padding: 64px 14px 44px; }
+  .hero__takyan { top: 8px; right: 12px; width: 52px; }
+  .hero__logo { width: 100%; }
+  .hero__title { font-size: 2.1rem; text-wrap: balance; }
+  .hero__tag { font-size: 1.08rem; margin-bottom: 22px; }
+  .hero__cta { flex-direction: column; align-items: center; gap: 12px; }
+  .chips { gap: 8px; margin-top: 22px; }
+  .chips li { font-size: .85rem; padding: 5px 12px; }
+
+  .btn { font-size: 1.05rem; }
+  .btn--play { padding: 13px 40px 13px 24px; text-align: center; line-height: 1.2; }
+
+  .panel { padding: 26px 18px 28px; }
+  .panel::after, .feature::after, .thanks::after { inset: 10px; }
+  .panel__head { padding-bottom: 10px; }
+  .panel__head h2, .panel__head h3 { font-size: 1.7rem; }
+  .panel__body { padding: 16px; }
+  .qr { gap: 18px; }
+  .qr__code { padding: 8px; }
+
+  .modes { gap: 12px; }
+  .mode { gap: 4px; }
+  .mode .character__art { max-width: 250px; }
+  .modes__takyan img { height: 100px; }
+
+  .feature { padding: 28px 22px 30px; }
+  .features { gap: 14px; }
+  .thanks { padding: 30px 22px 32px; gap: 14px; }
+  .thanks__photo img { width: 170px; }
+
+  .shots { gap: 18px; }
+  .footer__logo { width: 85%; }
+}
+
+/* Skills */
+.skills { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 22px; margin-top: 28px; }
+.skills .feature:nth-child(1) { --patch: var(--pill-orange); }
+.skills .feature:nth-child(2) { --patch: var(--pennant-blue); }
+.skill { display: grid; grid-template-columns: 96px 1fr; gap: 20px; align-items: start; }
+.skill__icon { width: 96px; height: 96px; border-radius: 18px; border: 3px solid #fff; box-shadow: 0 4px 0 rgba(58,34,22,.3); }
+.skill h3 { margin: 0 0 2px; }
+.skill__key { display: inline-block; margin-left: 6px; padding: 0 10px; border-radius: 8px; background: var(--cream); color: var(--brown-dark); font-size: 1rem; text-shadow: none; vertical-align: middle; }
+.skill__tag { margin: 0 0 8px; font-family: var(--font-display); color: var(--card-yellow); text-shadow: 1px 1px 0 rgba(58,34,22,.5); }
+.skill p { margin: 0 0 8px; font-size: 1rem; }
+.skill__note { font-size: .88rem; opacity: .92; }
+.skills__foot { text-align: center; color: var(--brown-dark); margin: 20px auto 0; max-width: 56ch; font-size: .95rem; }
+@media (max-width: 560px) { .skill { grid-template-columns: 1fr; justify-items: start; } .skill__icon { width: 80px; height: 80px; } .skill__key { display: none; } }

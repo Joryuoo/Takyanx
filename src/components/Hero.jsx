@@ -7,10 +7,10 @@ export default function Hero() {
       <img className="hero__takyan" src={takyan} alt="" aria-hidden="true" />
       <div className="hero__inner">
         <img className="hero__logo" src={logo} alt="Takyan X" />
-        <h1 className="hero__title">Make room for a rival.</h1>
+        <h1 className="hero__title">Don’t let the takyan drop.</h1>
         <p className="hero__tag">
-          A 3D take on the Filipino kick-game. Play solo, or host a room for
-          friends on your local network.
+          A 3D street-court take on the Filipino kick-game. Juggle solo for a
+          personal best, or take on a rival over your local network.
         </p>
         <div className="hero__cta">
           <a className="btn btn--play" href="#download">
