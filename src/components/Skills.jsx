@@ -34,11 +34,13 @@ export default function Skills() {
         {SKILLS.map((s) => (
           <article className="feature skill" key={s.name}>
             <img className="skill__icon" src={s.icon} alt={s.alt} loading="lazy" />
-            <div className="skill__text">
+            <div className="skill__head">
               <h3>
                 {s.name} <span className="skill__key">{s.key}</span>
               </h3>
               <p className="skill__tag">{s.tag}</p>
+            </div>
+            <div className="skill__body">
               <p>{s.body}</p>
               {s.note && <p className="skill__note">{s.note}</p>}
             </div>

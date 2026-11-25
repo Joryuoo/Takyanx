@@ -284,7 +284,10 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 400; line-height: 1.
 .skills { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 22px; margin-top: 28px; }
 .skills .feature:nth-child(1) { --patch: var(--pill-orange); }
 .skills .feature:nth-child(2) { --patch: var(--pennant-blue); }
-.skill { display: grid; grid-template-columns: 96px 1fr; gap: 20px; align-items: start; }
+.skill { display: grid; grid-template-columns: 96px 1fr; grid-template-areas: "icon head" "icon body"; gap: 4px 20px; align-items: start; }
+.skill__icon { grid-area: icon; }
+.skill__head { grid-area: head; align-self: end; }
+.skill__body { grid-area: body; }
 .skill__icon { width: 96px; height: 96px; border-radius: 18px; border: 3px solid #fff; box-shadow: 0 4px 0 rgba(58,34,22,.3); }
 .skill h3 { margin: 0 0 2px; }
 .skill__key { display: inline-block; margin-left: 6px; padding: 0 10px; border-radius: 8px; background: var(--cream); color: var(--brown-dark); font-size: 1rem; text-shadow: none; vertical-align: middle; }
@@ -292,7 +295,15 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 400; line-height: 1.
 .skill p { margin: 0 0 8px; font-size: 1rem; }
 .skill__note { font-size: .88rem; opacity: .92; }
 .skills__foot { text-align: center; color: var(--brown-dark); margin: 20px auto 0; max-width: 56ch; font-size: .95rem; }
-@media (max-width: 560px) { .skill { grid-template-columns: 1fr; justify-items: start; } .skill__icon { width: 80px; height: 80px; } .skill__key { display: none; } }
+@media (max-width: 560px) {
+  /* Phone: the name and tag sit beside the icon, the description runs full width below */
+  .skill { grid-template-columns: 84px 1fr; grid-template-areas: "icon head" "body body"; gap: 14px 16px; align-items: center; }
+  .skill__icon { width: 84px; height: 84px; }
+  .skill__head { align-self: center; }
+  .skill__head h3 { font-size: 1.6rem; margin: 0 0 2px; }
+  .skill__head .skill__tag { margin: 0; }
+  .skill__key { display: none; }
+}
 
 /* About cards: hand-placed, deliberately a little off (tilt, drop, size) */
 .features { align-items: start; padding: 14px 0 22px; }
