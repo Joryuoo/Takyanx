@@ -5,9 +5,6 @@ export default function Downloads() {
   return (
     <section className="section" id="download">
       <h2 className="section__title">Download</h2>
-      <p className="section__lead">
-        Free to play. Everyone in the match needs the game installed.
-      </p>
       <div className="cards">
         {Object.entries(DOWNLOADS).map(([key, d]) => (
           <article className={`panel panel--narrow panel--${key}`} key={key}>

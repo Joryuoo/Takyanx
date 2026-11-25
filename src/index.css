@@ -424,3 +424,6 @@ body { overflow-x: clip; }
 /* Download cards: one colour each (the Scan card above stays yellow) */
 .panel--android { --patch: var(--pennant-blue); }
 .panel--pc { --patch: var(--pill-red); }
+
+/* The Download title is followed straight by the cards, so give it the gap the intro line used to */
+#download .section__title { margin-bottom: 26px; }
