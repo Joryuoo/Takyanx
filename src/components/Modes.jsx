@@ -1,3 +1,5 @@
+import { Fragment } from 'react'
+import takyan from '../assets/img/takyan.webp'
 import c1 from '../assets/img/characters/character1.webp'
 import c1Hover from '../assets/img/characters/character1-hover.webp'
 import c2 from '../assets/img/characters/character2.webp'
@@ -37,8 +39,14 @@ export default function Modes() {
         power up.
       </p>
       <div className="modes">
-        {MODES.map((m) => (
-          <article className="mode" key={m.name}>
+        {MODES.map((m, i) => (
+          <Fragment key={m.name}>
+            {i === 1 && (
+              <div className="modes__takyan">
+                <img src={takyan} alt="A red takyan, the feathered shuttle players kick" loading="lazy" />
+              </div>
+            )}
+          <article className="mode">
             <div className="character" tabIndex={0}>
               <div className="character__art">
                 <img className="character__idle" src={m.art.idle} alt={m.art.alt} loading="lazy" />
@@ -59,6 +67,7 @@ export default function Modes() {
               </div>
             </div>
           </article>
+          </Fragment>
         ))}
       </div>
     </section>

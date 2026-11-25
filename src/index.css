@@ -190,7 +190,14 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 400; line-height: 1.
 .footer__interns { width: 160px; margin: 0 auto 8px; }
 
 /* Game modes */
-.modes { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+.modes { display: grid; grid-template-columns: minmax(0, 1fr) minmax(140px, .55fr) minmax(0, 1fr); gap: 24px; align-items: start; }
+.modes__takyan { align-self: start; display: grid; place-items: center; }
+.modes__takyan img { height: 340px; width: auto; max-width: 100%; object-fit: contain; filter: drop-shadow(0 10px 14px rgba(58,34,22,.4)); animation: float 4s ease-in-out infinite; }
+@media (max-width: 860px) {
+  .modes { grid-template-columns: 1fr; }
+  .modes__takyan { order: 0; }
+  .modes__takyan img { height: 150px; }
+}
 .panel__head--solo { background: var(--play-green); }
 .panel__head--multi { background: var(--pill-red); }
 .modes__tag { font-family: var(--font-display); font-size: 1.3rem; color: var(--pill-orange); margin: 0 0 10px; }
