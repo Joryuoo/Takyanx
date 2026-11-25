@@ -51,13 +51,20 @@ export default function Gallery() {
     <section className="section" id="in-game">
       <h2 className="section__title">In the game</h2>
       <p className="section__lead">Screenshots from the game itself.</p>
-      <div className="shots">
-        {SHOTS.map((s) => (
-          <figure className={`shot${s.featured ? ' shot--featured' : ''}`} key={s.caption}>
-            <img src={s.src} alt={s.alt} loading="lazy" />
-            <figcaption>{s.caption}</figcaption>
-          </figure>
-        ))}
+      {/* The list is rendered twice so the row can loop with no seam; the copy is hidden from
+          screen readers and from reduced-motion users (who get a plain scrollable row). */}
+      <div className="marquee" role="region" aria-label="Game screenshots">
+        <div className="marquee__track">
+          {[...SHOTS, ...SHOTS].map((s, i) => {
+            const copy = i >= SHOTS.length
+            return (
+              <figure className={`shot${copy ? ' shot--copy' : ''}`} key={`${s.caption}-${i}`} aria-hidden={copy || undefined}>
+                <img src={s.src} alt={copy ? '' : s.alt} loading="lazy" draggable="false" />
+                <figcaption>{s.caption}</figcaption>
+              </figure>
+            )
+          })}
+        </div>
       </div>
     </section>
   )

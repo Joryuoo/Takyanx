@@ -156,7 +156,6 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 400; line-height: 1.
 .feature p { margin: 0; font-size: 1rem; }
 
 /* Screens */
-.shots { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 30px 22px; margin-top: 28px; align-items: start; padding-bottom: 12px; }
 .shot { margin: 0; }
 .shot img { width: 100%; height: auto; border-radius: var(--radius); border: 4px solid #fff; box-shadow: 0 8px 0 rgba(58,34,22,.3); }
 .shot figcaption { margin-top: 14px; text-align: center; color: var(--brown-dark); }
@@ -278,7 +277,6 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 400; line-height: 1.
   .thanks { padding: 30px 22px 32px; gap: 14px; }
   .thanks__photo img { width: 170px; }
 
-  .shots { gap: 18px; }
   .footer__logo { width: 85%; }
 }
 
@@ -310,14 +308,27 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 400; line-height: 1.
   .features .feature:nth-child(4) { transform: rotate(1.4deg) translateY(-2px); }
 }
 
-/* Gallery: screenshots pinned up by hand, a little crooked */
-.shot--featured { grid-column: 1 / -1; width: min(760px, 100%); justify-self: center; }
-.shots .shot:nth-child(1) { transform: rotate(-0.8deg); }
-.shots .shot:nth-child(2) { transform: rotate(1.6deg) translateY(6px); }
-.shots .shot:nth-child(3) { transform: rotate(-1.2deg) translateY(-6px); }
-.shots .shot:nth-child(4) { transform: rotate(0.9deg) translateY(10px); }
-.shots .shot:nth-child(5) { transform: rotate(-1.8deg); }
-.shots .shot:nth-child(6) { transform: rotate(1.1deg) translateY(-8px); }
-.shots .shot:nth-child(7) { transform: rotate(-0.7deg) translateY(8px); }
-@media (max-width: 900px) { .shots { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (max-width: 560px) { .shots { grid-template-columns: 1fr; gap: 24px; } .shots .shot { transform: none; } .shots .shot:nth-child(even) { transform: rotate(0.8deg); } .shots .shot:nth-child(odd) { transform: rotate(-0.8deg); } }
+
+/* Gallery: a treadmill of screenshots. The track holds the list twice and slides left by exactly
+   one list (half its width, plus half the gap), so the loop never shows a seam. */
+body { overflow-x: clip; }
+.marquee { overflow: hidden; margin: 24px calc(50% - 50vw) 0; padding: 26px 0 18px;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent); }
+.marquee__track { display: flex; gap: 28px; width: max-content; animation: marquee 75s linear infinite; will-change: transform; }
+.marquee:hover .marquee__track, .marquee:focus-within .marquee__track { animation-play-state: paused; }
+@keyframes marquee { to { transform: translateX(calc(-50% - 14px)); } }
+.marquee .shot { flex: 0 0 auto; width: min(460px, 78vw); }
+.marquee .shot img { user-select: none; -webkit-user-drag: none; }
+.marquee .shot:nth-child(7n+1) { transform: rotate(-1.2deg) translateY(6px); }
+.marquee .shot:nth-child(7n+2) { transform: rotate(1.6deg) translateY(-8px); }
+.marquee .shot:nth-child(7n+3) { transform: rotate(-0.8deg) translateY(10px); }
+.marquee .shot:nth-child(7n+4) { transform: rotate(1.2deg) translateY(-4px); }
+.marquee .shot:nth-child(7n+5) { transform: rotate(-1.8deg) translateY(4px); }
+.marquee .shot:nth-child(7n+6) { transform: rotate(0.9deg) translateY(-10px); }
+.marquee .shot:nth-child(7n+7) { transform: rotate(-0.6deg) translateY(8px); }
+@media (prefers-reduced-motion: reduce) {
+  .marquee { overflow-x: auto; margin-inline: 0; -webkit-mask-image: none; mask-image: none; }
+  .marquee__track { animation: none; padding-inline: 16px; }
+  .shot--copy { display: none; }
+}
