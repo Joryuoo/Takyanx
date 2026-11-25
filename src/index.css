@@ -290,7 +290,6 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 400; line-height: 1.
 .skill__body { grid-area: body; }
 .skill__icon { width: 96px; height: 96px; border-radius: 18px; border: 3px solid #fff; box-shadow: 0 4px 0 rgba(58,34,22,.3); }
 .skill h3 { margin: 0 0 2px; }
-.skill__key { display: inline-block; margin-left: 6px; padding: 0 10px; border-radius: 8px; background: var(--cream); color: var(--brown-dark); font-size: 1rem; text-shadow: none; vertical-align: middle; }
 .skill__tag { margin: 0 0 8px; font-family: var(--font-display); color: var(--card-yellow); text-shadow: 1px 1px 0 rgba(58,34,22,.5); }
 .skill p { margin: 0 0 8px; font-size: 1rem; }
 .skill__note { font-size: .88rem; opacity: .92; }
@@ -301,7 +300,6 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 400; line-height: 1.
   .skill__head { align-self: center; }
   .skill__head h3 { font-size: 1.6rem; margin: 0 0 2px; }
   .skill__head .skill__tag { margin: 0; }
-  .skill__key { display: none; }
 }
 
 /* About cards: hand-placed, deliberately a little off (tilt, drop, size) */
@@ -496,3 +494,18 @@ body { overflow-x: clip; }
   background-size: 30px 100%, 30px 100%, calc(100% - 50.74px) 2px, calc(100% - 50.74px) 2px;
   background-position: left top, right top, 25.37px 6px, 25.37px calc(100% - 8px);
   background-repeat: no-repeat, no-repeat, repeat-x, repeat-x; }
+
+/* Hero: the kicker, standing in the empty lower-left (the floating takyan holds the right side).
+   Hidden on narrow screens so he never sits on top of the text. */
+@keyframes kick-bob { 0%, 100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-10px) rotate(-2deg); } }
+.hero__kicker { position: absolute; left: 4%; bottom: 30px; width: clamp(170px, 18vw, 300px); height: auto; pointer-events: none; user-select: none;
+  filter: drop-shadow(0 10px 12px rgba(58, 34, 22, .38)); animation: kick-bob 3.6s ease-in-out infinite; }
+@media (max-width: 900px) { .hero__kicker { display: none; } }
+
+/* Ticket stitching v3: clean corners. Replaces the earlier gradient and full-polygon stitching.
+   ::after draws the strip with border-image (30px caps, middle tile repeated a whole number of
+   times), so dashes line up evenly at both ends of any width and every corner turns the same way. */
+.btn--play::after, .hero__cta .btn--play::after { background: none; border: solid transparent; border-width: 0 30px; border-radius: 0;
+  border-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='71' height='55' viewBox='0 0 71 55'%3E%3Cg fill='none' stroke='white' stroke-width='2' stroke-linecap='butt'%3E%3Cline x1='25.37' y1='7' x2='8.97' y2='27.5' stroke-dasharray='6 4.125'/%3E%3Cline x1='8.97' y1='27.5' x2='25.37' y2='48' stroke-dasharray='6 4.125'/%3E%3Cline x1='25.37' y1='7' x2='30' y2='7'/%3E%3Cline x1='25.37' y1='48' x2='30' y2='48'/%3E%3Cline x1='32.5' y1='7' x2='38.5' y2='7'/%3E%3Cline x1='32.5' y1='48' x2='38.5' y2='48'/%3E%3Cline x1='41' y1='7' x2='45.63' y2='7'/%3E%3Cline x1='41' y1='48' x2='45.63' y2='48'/%3E%3Cline x1='45.63' y1='7' x2='62.03' y2='27.5' stroke-dasharray='6 4.125'/%3E%3Cline x1='62.03' y1='27.5' x2='45.63' y2='48' stroke-dasharray='6 4.125'/%3E%3C/g%3E%3C/svg%3E") 0 30 fill / 0 30px / 0 round; }
+.hero__cta .btn--cream::after { background: none; border: solid transparent; border-width: 0 30px; border-radius: 0;
+  border-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='71' height='55' viewBox='0 0 71 55'%3E%3Cg fill='none' stroke='%238a4b25' stroke-width='2' stroke-linecap='butt'%3E%3Cline x1='25.37' y1='7' x2='8.97' y2='27.5' stroke-dasharray='6 4.125'/%3E%3Cline x1='8.97' y1='27.5' x2='25.37' y2='48' stroke-dasharray='6 4.125'/%3E%3Cline x1='25.37' y1='7' x2='30' y2='7'/%3E%3Cline x1='25.37' y1='48' x2='30' y2='48'/%3E%3Cline x1='32.5' y1='7' x2='38.5' y2='7'/%3E%3Cline x1='32.5' y1='48' x2='38.5' y2='48'/%3E%3Cline x1='41' y1='7' x2='45.63' y2='7'/%3E%3Cline x1='41' y1='48' x2='45.63' y2='48'/%3E%3Cline x1='45.63' y1='7' x2='62.03' y2='27.5' stroke-dasharray='6 4.125'/%3E%3Cline x1='62.03' y1='27.5' x2='45.63' y2='48' stroke-dasharray='6 4.125'/%3E%3C/g%3E%3C/svg%3E") 0 30 fill / 0 30px / 0 round; }

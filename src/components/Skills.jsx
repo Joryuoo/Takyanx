@@ -5,7 +5,6 @@ import taghoy from '../assets/img/skills/taghoy.webp'
 const SKILLS = [
   {
     name: 'Shagit',
-    key: 'Q',
     tag: 'A shout',
     icon: shagit,
     alt: 'Shagit skill icon: a player shouting',
@@ -13,7 +12,6 @@ const SKILLS = [
   },
   {
     name: 'Taghoy',
-    key: 'R',
     tag: 'A whistle',
     icon: taghoy,
     alt: 'Taghoy skill icon: swirling wind',
@@ -35,9 +33,7 @@ export default function Skills() {
           <article className="feature skill" key={s.name}>
             <img className="skill__icon" src={s.icon} alt={s.alt} loading="lazy" />
             <div className="skill__head">
-              <h3>
-                {s.name} <span className="skill__key">{s.key}</span>
-              </h3>
+              <h3>{s.name}</h3>
               <p className="skill__tag">{s.tag}</p>
             </div>
             <div className="skill__body">

@@ -1,10 +1,12 @@
 import logo from '../assets/img/logo-new.webp'
 import takyan from '../assets/img/takyan-blue.webp'
+import kicker from '../assets/img/kicker.webp'
 
 export default function Hero() {
   return (
     <section className="hero" id="top">
       <img className="hero__takyan" src={takyan} alt="" aria-hidden="true" />
+      <img className="hero__kicker" src={kicker} alt="" aria-hidden="true" />
       <div className="hero__inner">
         <img className="hero__logo" src={logo} alt="Takyan X" />
         <h1 className="hero__title">Don’t let the takyan drop.</h1>
