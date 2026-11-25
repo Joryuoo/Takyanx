@@ -11,8 +11,8 @@ const MODES = [
     tone: 'solo',
     tagline: 'You vs. the takyan.',
     points: [
-      'Juggle the takyan for points.',
-      'Beat your personal best.',
+      'Vs Bot.',
+      'Endless solo mode: beat your previous best.',
     ],
     art: { idle: c1, hover: c1Hover, alt: 'Takyan X player mid-kick with a blue slipper' },
   },
@@ -22,7 +22,7 @@ const MODES = [
     tagline: 'Make room for a rival.',
     points: [
       'Host a room or join one.',
-      '1 vs 1, or free for all.',
+      '1v1, or Rambol with up to 5 players.',
     ],
     art: { idle: c2, hover: c2Hover, alt: 'Takyan X player leaning back on a giant red slipper' },
   },

@@ -384,3 +384,9 @@ body { overflow-x: clip; }
   .skills .feature:nth-child(1) { transform: rotate(-.8deg); }
   .skills .feature:nth-child(2) { transform: rotate(.8deg); }
 }
+
+/* Mode cards: text sits straight on the coloured patch (no cream box inside the stitching) */
+.modes .panel__body { padding: 6px 4px 2px; background: transparent; box-shadow: none; border-radius: 0; color: #fff; }
+.modes .modes__tag { margin: 0 0 12px; font-size: 1.45rem; color: var(--card-yellow); text-shadow: 2px 2px 0 rgba(58, 34, 22, .5); }
+.modes .modes__list { padding-left: 1.2em; font-size: 1.1rem; }
+.modes .modes__list li { margin-bottom: 10px; }
