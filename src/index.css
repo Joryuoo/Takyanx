@@ -343,3 +343,15 @@ body { overflow-x: clip; }
   .marquee__track { animation: none; padding-inline: 16px; }
   .shot--copy { display: none; }
 }
+
+/* Gameplay clips (gifs), pinned up a little crooked like the other frames */
+.clips { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 30px 22px; margin-top: 28px; align-items: start; padding-bottom: 12px; }
+.clips .shot img { width: 100%; height: auto; background: #1d1a17; }
+.clips .shot:nth-child(1) { transform: rotate(-1.2deg) translateY(4px); }
+.clips .shot:nth-child(2) { transform: rotate(1.4deg) translateY(-8px); }
+.clips .shot:nth-child(3) { transform: rotate(-0.7deg) translateY(10px); }
+.clips .shot:nth-child(4) { transform: rotate(1.6deg) translateY(-2px); }
+.clips .shot:nth-child(5) { transform: rotate(-1.5deg) translateY(8px); }
+.clips .shot:nth-child(6) { transform: rotate(0.9deg) translateY(-6px); }
+@media (max-width: 900px) { .clips { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .clips { grid-template-columns: 1fr; gap: 24px; } .clips .shot:nth-child(odd) { transform: rotate(-0.8deg); } .clips .shot:nth-child(even) { transform: rotate(0.8deg); } }

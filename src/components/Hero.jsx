@@ -16,7 +16,7 @@ export default function Hero() {
           <a className="btn btn--play" href="#download">
             Get the game
           </a>
-          <a className="btn btn--cream" href="#in-game">
+          <a className="btn btn--cream" href="#clips">
             See it in action
           </a>
         </div>
