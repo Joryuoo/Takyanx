@@ -15,12 +15,12 @@ import showoffStill from '../assets/img/clips/showoff-pasikat.webp'
 // One clip plays at a time. `seconds` is the real length of each clip, used to move on to the
 // next one. Captions are just the clip titles; nothing here claims more than the footage shows.
 const CLIPS = [
-  { gif: rally, still: rallyStill, title: 'Rally', seconds: 17.8 },
+  { gif: showoff, still: showoffStill, title: 'Show-off (Pasikat)', seconds: 7.8 },
   { gif: juggle, still: juggleStill, title: 'Juggle and defend', seconds: 29.3 },
+  { gif: rally, still: rallyStill, title: 'Rally', seconds: 17.8 },
+  { gif: hit, still: hitStill, title: 'Getting hit by Shagit and Taghoy', seconds: 15.1 },
   { gif: shagit, still: shagitStill, title: 'Casting Shagit', seconds: 7.6 },
   { gif: taghoy, still: taghoyStill, title: 'Casting Taghoy (Panaghoy)', seconds: 5.8 },
-  { gif: hit, still: hitStill, title: 'Getting hit by Shagit and Taghoy', seconds: 15.1 },
-  { gif: showoff, still: showoffStill, title: 'Show-off (Pasikat)', seconds: 7.8 },
 ]
 
 function usePrefersReducedMotion() {
