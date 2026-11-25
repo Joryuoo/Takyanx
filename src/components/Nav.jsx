@@ -8,6 +8,7 @@ export default function Nav() {
       <nav className="nav__links" aria-label="Sections">
         <a href="#scan">Scan</a>
         <a href="#download">Download</a>
+        <a href="#modes">Modes</a>
         <a href="#about">About</a>
         <a href="#characters">Players</a>
         <a href="#in-game">In game</a>
