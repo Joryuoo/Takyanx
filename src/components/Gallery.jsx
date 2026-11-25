@@ -5,18 +5,18 @@ import thanks from '../assets/img/screens/special-thanks.webp'
 const SHOTS = [
   {
     src: localPlay,
-    alt: 'Room setup screen: pick one vs one or free for all, set the match timer, and invite players on the same Wi-Fi',
+    alt: 'Room setup screen: pick one vs one or free for all, set the match timer, and see who is in the room',
     caption: 'Set up a room',
   },
   {
     src: bato,
     alt: 'Bato Bato Pik, a rock-paper-scissors showdown between host and player',
-    caption: 'Bato Bato Pik decides who serves',
+    caption: 'Bato Bato Pik decides who kicks first',
   },
   {
     src: thanks,
     alt: 'Special thanks credits screen with the Takyan X logo',
-    caption: 'Hand-painted, cardboard-and-crayon look',
+    caption: 'Special thanks, from the in-game credits',
   },
 ]
 

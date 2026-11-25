@@ -18,14 +18,14 @@ export const DOWNLOADS = {
     label: 'Android',
     file: 'TakyanX.apk',
     size: '~1 GB',
-    note: 'Opens Google Drive. Allow "install unknown apps" when prompted.',
+    note: 'Opens Google Drive.',
     url: APK_DRIVE_URL,
   },
   pc: {
     label: 'PC',
     file: 'TakyanX (Windows)',
     size: 'Size TBA',
-    note: 'Opens Google Drive. Windows 10 / 11, 64-bit.',
+    note: 'Opens Google Drive.',
     url: PC_DRIVE_URL,
   },
 }

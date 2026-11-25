@@ -195,12 +195,12 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 400; line-height: 1.
 .footer__interns { width: 160px; margin: 0 auto 8px; }
 
 /* Game modes */
-.modes { display: grid; grid-template-columns: minmax(0, 1fr) minmax(140px, .55fr) minmax(0, 1fr); gap: 24px; align-items: start; }
-.modes__takyan { align-self: start; display: grid; place-items: center; }
-.modes__takyan img { height: 340px; width: auto; max-width: 100%; object-fit: contain; filter: drop-shadow(0 10px 14px rgba(58,34,22,.4)); animation: float 4s ease-in-out infinite; }
+.modes { display: grid; grid-template-columns: minmax(0, 1fr) minmax(120px, .38fr) minmax(0, 1fr); gap: 20px; align-items: start; }
+.modes__takyan { align-self: start; display: grid; place-items: center; margin-top: 120px; }
+.modes__takyan img { height: 250px; width: auto; max-width: 100%; object-fit: contain; filter: drop-shadow(0 10px 14px rgba(58,34,22,.4)); animation: float 4s ease-in-out infinite; }
 @media (max-width: 860px) {
   .modes { grid-template-columns: 1fr; }
-  .modes__takyan { order: 0; }
+  .modes__takyan { order: 0; margin-top: 0; }
   .modes__takyan img { height: 150px; }
 }
 .modes__tag { font-family: var(--font-display); font-size: 1.3rem; color: var(--pill-orange); margin: 0 0 10px; }
@@ -216,7 +216,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 400; line-height: 1.
 .character:hover .character__idle, .character:focus-visible .character__idle { opacity: 0; }
 .character:hover .character__art, .character:focus-visible .character__art { transform: scale(1.04) rotate(-1.5deg); transition: transform .25s ease; }
 .mode { display: flex; flex-direction: column; gap: 16px; }
-.mode .character__art { aspect-ratio: 4 / 4; max-width: 340px; margin: 0 auto; }
+.mode .character__art { aspect-ratio: 4 / 5; width: 100%; max-width: 520px; margin: 0 auto; }
 .footer p { margin: 4px 0; }
 .footer__small { font-size: .9rem; }
 

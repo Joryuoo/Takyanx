@@ -1,19 +1,19 @@
 const FEATURES = [
   {
     title: 'What is takyan?',
-    body: 'A traditional Filipino street game: keep a feathered, weighted shuttle in the air using only your feet. Think hacky sack meets shuttlecock.',
+    body: 'The traditional Filipino kick-game, similar to hacky sack or shuttlecock kicking.',
   },
   {
     title: '3D physics kicks',
-    body: 'Charge, jump and time every kick. Physics-based movement makes each rally feel different.',
+    body: 'Physics-based kicking and movement, in full 3D.',
   },
   {
     title: 'Local LAN multiplayer',
-    body: 'Host a room or join one with the host’s code. No servers, no accounts, just the same Wi-Fi.',
+    body: 'Host a room and share its code, or join one from the room list. Everyone plays on the same local network.',
   },
   {
-    title: 'Made in the Philippines',
-    body: 'Jeepneys, tricycles, slums and basketball courts — the neighborhood is the arena.',
+    title: 'A street-court arena',
+    body: 'Play on a basketball court in a neighborhood street, with jeepneys, graffiti walls and shanty houses around you.',
   },
 ]
 

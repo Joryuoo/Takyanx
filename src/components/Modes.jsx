@@ -11,9 +11,10 @@ const MODES = [
     tone: 'solo',
     tagline: 'You vs. the takyan.',
     points: [
-      'Keep the takyan in the air with a juggling combo.',
-      'Time each kick: Perfect, Good or Late scores points.',
-      'Beat your saved high score.',
+      'Play: juggle the takyan for points and build a combo.',
+      'Beat your personal best.',
+      'Vs Bot: an offline 1v1 against a bot.',
+      'Tutorial: a walkthrough to learn the kicks.',
     ],
     art: { idle: c1, hover: c1Hover, alt: 'Takyan X player mid-kick with a blue slipper' },
   },
@@ -22,9 +23,10 @@ const MODES = [
     tone: 'multi',
     tagline: 'Make room for a rival.',
     points: [
-      'Host a room or join one on the same Wi-Fi. No accounts needed.',
-      'Head-to-head 1 vs 1 matches against a friend.',
-      'Free for all rooms are in the works.',
+      'Host a room and share its code, or join one from the room list.',
+      '1 vs 1 duels, or Free for all (Rambol) for up to 5 players.',
+      'Bato Bato Pik, a rock-paper-scissors pick, decides who kicks first.',
+      'Everyone plays on the same local network.',
     ],
     art: { idle: c2, hover: c2Hover, alt: 'Takyan X player leaning back on a giant red slipper' },
   },
@@ -35,8 +37,8 @@ export default function Modes() {
     <section className="section" id="modes">
       <h2 className="section__title">Game modes</h2>
       <p className="section__lead">
-        Practice on your own, or take on a rival. Hover or tap a player to
-        power up.
+        Play solo, or host a room for friends. Hover or tap a player to power
+        up.
       </p>
       <div className="modes">
         {MODES.map((m, i) => (

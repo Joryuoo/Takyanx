@@ -9,8 +9,8 @@ export default function Hero() {
         <img className="hero__logo" src={logo} alt="Takyan X" />
         <h1 className="hero__title">Make room for a rival.</h1>
         <p className="hero__tag">
-          The Filipino kick-game, in 3D. Pick your mode, invite your rival on
-          the same Wi-Fi, and keep the takyan in the air.
+          A 3D take on the Filipino kick-game. Play solo, or host a room for
+          friends on your local network.
         </p>
         <div className="hero__cta">
           <a className="btn btn--play" href="#download">
