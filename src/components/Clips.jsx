@@ -18,9 +18,9 @@ const CLIPS = [
   { gif: showoff, still: showoffStill, title: 'Show-off (Pasikat)', seconds: 7.8 },
   { gif: juggle, still: juggleStill, title: 'Juggle and defend', seconds: 29.3 },
   { gif: rally, still: rallyStill, title: 'Rally', seconds: 17.8 },
-  { gif: hit, still: hitStill, title: 'Getting hit by Shagit and Taghoy', seconds: 15.1 },
   { gif: shagit, still: shagitStill, title: 'Casting Shagit', seconds: 7.6 },
   { gif: taghoy, still: taghoyStill, title: 'Casting Taghoy (Panaghoy)', seconds: 5.8 },
+  { gif: hit, still: hitStill, title: 'Getting hit by Shagit and Taghoy', seconds: 15.1 },
 ]
 
 function usePrefersReducedMotion() {
