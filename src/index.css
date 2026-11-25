@@ -424,3 +424,13 @@ body { overflow-x: clip; }
 /* Download cards: one colour each (the Scan card above stays yellow) */
 .panel--android { --patch: var(--pennant-blue); }
 .panel--pc { --patch: var(--pill-red); }
+
+/* Download cards: tilted a little, one each way */
+.panel--android { transform: rotate(-1.5deg) translateY(4px); }
+.panel--pc { transform: rotate(1.3deg) translateY(-4px); }
+.cards { padding: 8px 0 12px; }
+@media (max-width: 560px) {
+  .panel--android { transform: rotate(-.9deg); }
+  .panel--pc { transform: rotate(.9deg); }
+}
+@media (prefers-reduced-motion: reduce) { .panel--android, .panel--pc { transform: none; } }
