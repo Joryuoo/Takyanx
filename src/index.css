@@ -485,3 +485,14 @@ body { overflow-x: clip; }
 .hero__cta .btn--cream::before { background: var(--cream); }
 .hero__cta .btn--cream::after { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 224 55' preserveAspectRatio='none'%3E%3Cpolygon points='8.97,27.5 25.37,7 198.63,7 215.03,27.5 198.63,48 25.37,48' fill='none' stroke='%238a4b25' stroke-width='2' stroke-dasharray='6 5' stroke-linejoin='round' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E"); }
 .hero__cta .btn:active { box-shadow: none; transform: translateY(2px); }
+
+/* Every Play-style button (download cards, open-link, install): the ticket pointed at both ends.
+   Same construction as the hero pair, but the stitching is built from two fixed end-caps and
+   two stretchy dashed lines, so the points keep the same angle at any button width. */
+.btn--play { --tip: 22px; position: relative; isolation: isolate; border: 0; border-radius: 0; background: #fff; padding: 16px 44px; text-align: center; line-height: 1.2;
+  clip-path: polygon(0 50%, var(--tip) 0, calc(100% - var(--tip)) 0, 100% 50%, calc(100% - var(--tip)) 100%, var(--tip) 100%); }
+.btn--play::before { clip-path: polygon(1px 50%, 20.4px 0, calc(100% - 20.4px) 0, calc(100% - 1px) 50%, calc(100% - 20.4px) 100%, 20.4px 100%); }
+.btn--play::after { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 55' preserveAspectRatio='none'%3E%3Cpolyline points='25.37,7 8.97,27.5 25.37,48' fill='none' stroke='white' stroke-width='2' stroke-dasharray='6 5' stroke-linejoin='round' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E"), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 55' preserveAspectRatio='none'%3E%3Cpolyline points='4.63,7 21.03,27.5 4.63,48' fill='none' stroke='white' stroke-width='2' stroke-dasharray='6 5' stroke-linejoin='round' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E"), repeating-linear-gradient(90deg, #fff 0 6px, transparent 6px 11px), repeating-linear-gradient(90deg, #fff 0 6px, transparent 6px 11px);
+  background-size: 30px 100%, 30px 100%, calc(100% - 50.74px) 2px, calc(100% - 50.74px) 2px;
+  background-position: left top, right top, 25.37px 6px, 25.37px calc(100% - 8px);
+  background-repeat: no-repeat, no-repeat, repeat-x, repeat-x; }
