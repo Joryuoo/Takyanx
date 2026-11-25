@@ -393,3 +393,27 @@ body { overflow-x: clip; }
 /* Special thanks: the title now sits above the card, so the card holds just the photo and text */
 .thanks { grid-template-areas: "photo text"; margin-top: 28px; align-items: center; }
 @media (max-width: 640px) { .thanks { grid-template-areas: "photo" "text"; } }
+
+/* Install / offline status, under the download cards */
+.install { max-width: 560px; margin: 34px auto 0; text-align: center; }
+.install__title { margin: 0 0 6px; font-family: var(--font-display); font-size: 1.5rem; color: #fff; text-shadow: 2px 2px 0 var(--brown); }
+.install__status { margin: 0 0 14px; color: var(--brown-dark); }
+.install__hint { margin: 0; font-size: .92rem; color: var(--brown-dark); opacity: .85; }
+
+/* Mode cards: tilted a little, one each way */
+.modes .mode:nth-child(1) .panel { transform: rotate(-1.6deg); }
+.modes .mode:nth-child(3) .panel { transform: rotate(1.4deg); }
+@media (max-width: 860px) {
+  .modes .mode:nth-child(1) .panel { transform: rotate(-1deg); }
+  .modes .mode:nth-child(3) .panel { transform: rotate(1deg); }
+}
+@media (prefers-reduced-motion: reduce) { .modes .mode .panel { transform: none !important; } }
+
+/* Two nav links only: keep them on one line on small phones */
+@media (max-width: 420px) {
+  .nav { padding-inline: 12px; gap: 8px; }
+  .nav__brand { font-size: 1.1rem; gap: 6px; }
+  .nav__brand img { width: 30px; height: 30px; }
+  .nav__links { gap: 12px; }
+  .nav__links a { font-size: .92rem; white-space: nowrap; }
+}

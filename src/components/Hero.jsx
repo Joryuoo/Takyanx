@@ -10,7 +10,7 @@ export default function Hero() {
         <h1 className="hero__title">Don’t let the takyan drop.</h1>
         <p className="hero__tag">
           A 3D street-court take on the Filipino kick-game. Juggle solo for a
-          personal best, or take on a rival over your local network.
+          personal best, or take on friends in multiplayer.
         </p>
         <div className="hero__cta">
           <a className="btn btn--play" href="#download">
@@ -22,7 +22,7 @@ export default function Hero() {
         </div>
         <ul className="chips" aria-label="Highlights">
           <li>3D physics kicking</li>
-          <li>Local LAN multiplayer</li>
+          <li>Up to 5 players</li>
           <li>Android + PC</li>
         </ul>
       </div>

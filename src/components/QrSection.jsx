@@ -29,7 +29,7 @@ export default function QrSection() {
             <ol className="steps">
               <li>Scan the code and open the Drive link.</li>
               <li>Download and install the APK.</li>
-              <li>Play solo, or host or join a room on the same local network.</li>
+              <li>Play solo, or host or join a room.</li>
             </ol>
             <a
               className="btn btn--play"

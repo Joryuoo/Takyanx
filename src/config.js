@@ -2,16 +2,16 @@
 // The builds are huge (APK ~1 GB), so they are NOT bundled into this site. They are
 // shared only through the QR code and Drive links.
 //
-// TODO: replace the placeholders below with the real Google Drive links, or set
-// VITE_APK_DRIVE_URL / VITE_PC_DRIVE_URL in .env.local.
+// Both downloads currently point at the shared Drive folder. To point them at separate files,
+// change the two URLs below or set VITE_APK_DRIVE_URL / VITE_PC_DRIVE_URL in .env.local.
 
 const env = import.meta.env
 
 export const APK_DRIVE_URL =
-  env.VITE_APK_DRIVE_URL || 'https://drive.google.com/PLACEHOLDER-takyanx-apk'
+  env.VITE_APK_DRIVE_URL || 'https://drive.google.com/drive/folders/1S1UyX_tz_cugpD4Mku45ltkX9K_mQ1Za?usp=sharing'
 
 export const PC_DRIVE_URL =
-  env.VITE_PC_DRIVE_URL || 'https://drive.google.com/PLACEHOLDER-takyanx-pc'
+  env.VITE_PC_DRIVE_URL || 'https://drive.google.com/drive/folders/1S1UyX_tz_cugpD4Mku45ltkX9K_mQ1Za?usp=sharing'
 
 export const DOWNLOADS = {
   android: {

@@ -6,13 +6,8 @@ export default function Nav() {
         <span>Takyan X</span>
       </a>
       <nav className="nav__links" aria-label="Sections">
-        <a href="#scan">Scan</a>
         <a href="#download">Download</a>
-        <a href="#modes">Modes</a>
-        <a href="#skills">Skills</a>
-        <a href="#about">About</a>
-        <a href="#in-game">In game</a>
-        <a href="#team">Team</a>
+        <a href="#clips">See it in action</a>
       </nav>
     </header>
   )

@@ -8,8 +8,8 @@ const FEATURES = [
     body: 'Physics-based kicking and movement, in full 3D.',
   },
   {
-    title: 'Local LAN multiplayer',
-    body: 'Host a room and share its code, or join one from the room list. Everyone plays on the same local network.',
+    title: 'Multiplayer rooms',
+    body: 'Host a room and share its code, or join one from the room list. Play 1v1, or Rambol with up to 5 players.',
   },
   {
     title: 'A street-court arena',
