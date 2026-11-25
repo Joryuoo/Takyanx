@@ -5,6 +5,7 @@ export default function Downloads() {
   return (
     <section className="section" id="download">
       <h2 className="section__title">Download</h2>
+      <p className="section__lead">Your Takyan game, at your desk and in your pocket.</p>
       <div className="cards">
         {Object.entries(DOWNLOADS).map(([key, d]) => (
           <article className={`panel panel--narrow panel--${key}`} key={key}>
