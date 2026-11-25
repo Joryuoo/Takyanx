@@ -467,3 +467,21 @@ body { overflow-x: clip; }
 .hero__cta .btn:hover { transform: translateY(-2px); }
 .hero__cta .btn:active { transform: translateY(2px); box-shadow: 0 2px 0 rgba(58, 34, 22, .3); }
 @media (max-width: 560px) { .hero__cta .btn { min-width: 240px; } }
+
+/* Hero buttons v2: the ticket look, pointed at BOTH ends (< label >). Outer element = white edge,
+   ::before = the colour (inset 3px), ::after = the stitching that follows the points. The shape
+   uses fixed pixel points so the arrow angle stays the same at any width, and the drop shadow
+   sits on the container because clip-path would cut a shadow on the buttons themselves. */
+.hero__cta { filter: drop-shadow(0 5px 0 rgba(58, 34, 22, .28)); }
+.hero__cta .btn { --tip: 22px; box-shadow: none; border: 0; border-radius: 0; padding: 16px 44px; min-width: 232px;
+  background: #fff; clip-path: polygon(0 50%, var(--tip) 0, calc(100% - var(--tip)) 0, 100% 50%, calc(100% - var(--tip)) 100%, var(--tip) 100%); }
+.hero__cta .btn::before { content: ""; position: absolute; inset: 3px; z-index: -1;
+  clip-path: polygon(1px 50%, 20.4px 0, calc(100% - 20.4px) 0, calc(100% - 1px) 50%, calc(100% - 20.4px) 100%, 20.4px 100%); }
+.hero__cta .btn::after { content: ""; position: absolute; inset: 0; border: 0; border-radius: 0; pointer-events: none; background-size: 100% 100%; background-repeat: no-repeat; }
+.hero__cta .btn--play { color: #fff; }
+.hero__cta .btn--play::before { background: var(--play-green); }
+.hero__cta .btn--play::after { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 224 55' preserveAspectRatio='none'%3E%3Cpolygon points='8.97,27.5 25.37,7 198.63,7 215.03,27.5 198.63,48 25.37,48' fill='none' stroke='white' stroke-width='2' stroke-dasharray='6 5' stroke-linejoin='round' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E"); }
+.hero__cta .btn--cream { color: var(--brown-dark); }
+.hero__cta .btn--cream::before { background: var(--cream); }
+.hero__cta .btn--cream::after { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 224 55' preserveAspectRatio='none'%3E%3Cpolygon points='8.97,27.5 25.37,7 198.63,7 215.03,27.5 198.63,48 25.37,48' fill='none' stroke='%238a4b25' stroke-width='2' stroke-dasharray='6 5' stroke-linejoin='round' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E"); }
+.hero__cta .btn:active { box-shadow: none; transform: translateY(2px); }
