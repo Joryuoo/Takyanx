@@ -6,7 +6,6 @@ const GAME = path.resolve('..', 'Takyanx', 'Assets', 'Images')
 const OUT = path.resolve('src', 'assets', 'img')
 
 const jobs = [
-  ['Graffiti/takyanx.png', 'logo.webp', 1400],
   ['Blue Takyan.png', 'takyan-blue.webp', 700],
   ['TakyanX_Banner.png', 'finalist-banner.webp', 1100],
   ['Graffiti/The Interns.png', 'graffiti-interns.webp', 1000],

@@ -1,14 +1,17 @@
-// Single place to point the site at the real build.
-// The APK is huge (~1 GB), so it is NOT bundled into this site. It is shared only
-// through the QR code and a Drive link.
+// Single place to point the site at the real builds.
+// The builds are huge (APK ~1 GB), so they are NOT bundled into this site. They are
+// shared only through the QR code and Drive links.
 //
-// TODO: replace the placeholder below with the real Google Drive link, or set
-// VITE_APK_DRIVE_URL in .env.local.
+// TODO: replace the placeholders below with the real Google Drive links, or set
+// VITE_APK_DRIVE_URL / VITE_PC_DRIVE_URL in .env.local.
 
 const env = import.meta.env
 
 export const APK_DRIVE_URL =
   env.VITE_APK_DRIVE_URL || 'https://drive.google.com/PLACEHOLDER-takyanx-apk'
+
+export const PC_DRIVE_URL =
+  env.VITE_PC_DRIVE_URL || 'https://drive.google.com/PLACEHOLDER-takyanx-pc'
 
 export const DOWNLOADS = {
   android: {
@@ -18,9 +21,16 @@ export const DOWNLOADS = {
     note: 'Opens Google Drive. Allow "install unknown apps" when prompted.',
     url: APK_DRIVE_URL,
   },
+  pc: {
+    label: 'PC',
+    file: 'TakyanX (Windows)',
+    size: 'Size TBA',
+    note: 'Opens Google Drive. Windows 10 / 11, 64-bit.',
+    url: PC_DRIVE_URL,
+  },
 }
 
-// What the QR code encodes. Same Drive link by default.
+// What the QR code encodes. The Android Drive link by default.
 export const QR_TARGET = env.VITE_QR_TARGET || APK_DRIVE_URL
 
 export const REPO_URL = 'https://github.com/Tech-Wrightttt/Takyan_X'

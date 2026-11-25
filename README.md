@@ -10,8 +10,8 @@ Frontend-only site (Vite + React) for Takyan X: a QR code and download links for
 
 ## Download link
 
-The APK (~1 GB) is not bundled. It is shared only through the QR code and a Drive link.
-Replace the placeholder in `src/config.js` (or set `VITE_APK_DRIVE_URL` in `.env.local`).
+The builds (APK ~1 GB, PC) are not bundled. They are shared only through the QR code and Drive links.
+Replace the placeholders in `src/config.js` (or set `VITE_APK_DRIVE_URL` and `VITE_PC_DRIVE_URL` in `.env.local`).
 The QR code encodes the same link unless `VITE_QR_TARGET` is set.
 
 ## Assets

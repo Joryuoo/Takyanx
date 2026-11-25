@@ -1,4 +1,4 @@
-import logo from '../assets/img/logo.webp'
+import logo from '../assets/img/logo-new.webp'
 import takyan from '../assets/img/takyan-blue.webp'
 
 export default function Hero() {
@@ -13,7 +13,7 @@ export default function Hero() {
           the same Wi-Fi, and keep the takyan in the air.
         </p>
         <div className="hero__cta">
-          <a className="btn btn--play" href="#scan">
+          <a className="btn btn--play" href="#download">
             Get the game
           </a>
           <a className="btn btn--cream" href="#in-game">
@@ -23,7 +23,7 @@ export default function Hero() {
         <ul className="chips" aria-label="Highlights">
           <li>3D physics kicking</li>
           <li>Local LAN multiplayer</li>
-          <li>Android</li>
+          <li>Android + PC</li>
         </ul>
       </div>
     </section>
