@@ -10,7 +10,7 @@ export default function Downloads() {
       </p>
       <div className="cards">
         {Object.entries(DOWNLOADS).map(([key, d]) => (
-          <article className="panel panel--narrow" key={key}>
+          <article className={`panel panel--narrow panel--${key}`} key={key}>
             <header className="panel__head">
               <h3>{d.label}</h3>
             </header>

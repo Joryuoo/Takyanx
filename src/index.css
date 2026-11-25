@@ -420,3 +420,7 @@ body { overflow-x: clip; }
 
 /* The QR is a picture now (the team's own artwork), not a generated SVG */
 .qr__code img { display: block; width: min(260px, 70vw); height: auto; }
+
+/* Download cards: one colour each (the Scan card above stays yellow) */
+.panel--android { --patch: var(--pennant-blue); }
+.panel--pc { --patch: var(--pill-red); }
