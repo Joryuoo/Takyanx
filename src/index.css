@@ -527,3 +527,13 @@ body { overflow-x: clip; }
 .finalist figcaption { margin-top: 16px; color: var(--brown-dark); }
 @media (max-width: 560px) { .finalist { padding: 30px 24px 24px; } .finalist::after { inset: 10px; } }
 @media (prefers-reduced-motion: reduce) { .finalist { transform: none; } }
+
+/* Phones: the takyan leaves the gap between the two cards and sits in the Solo card's free
+   top-right corner instead. Desktop keeps it between the two players. */
+.modes__takyan-in-card { display: none; }
+@media (max-width: 860px) {
+  .modes__takyan { display: none; }
+  .modes__takyan-in-card { display: block; position: absolute; top: 20px; right: 26px; width: auto; height: 124px; pointer-events: none; user-select: none;
+    filter: drop-shadow(0 6px 8px rgba(58, 34, 22, .4)); animation: float 4s ease-in-out infinite; }
+}
+@media (max-width: 380px) { .modes__takyan-in-card { top: 16px; right: 20px; height: 100px; } }

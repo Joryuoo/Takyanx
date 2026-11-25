@@ -52,6 +52,8 @@ export default function Modes() {
               </div>
             </div>
             <div className={`panel panel--${m.tone}`}>
+              {/* Phones only: the takyan moves from between the cards into the Solo card's free corner. */}
+              {i === 0 && <img className="modes__takyan-in-card" src={takyan} alt="" aria-hidden="true" />}
               <header className={`panel__head`}>
                 <h3>{m.name}</h3>
               </header>
