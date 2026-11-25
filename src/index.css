@@ -454,3 +454,16 @@ body { overflow-x: clip; }
 .modes .mode:nth-child(3) .character__art { animation-delay: 3s; }
 .character:hover .character__hover, .character:hover .character__idle, .character:hover .character__art,
 .character:focus-visible .character__hover, .character:focus-visible .character__idle, .character:focus-visible .character__art { animation: none; }
+
+/* Hero buttons: one matching pair (same size and shape, white edge, stitched inside, soft drop).
+   The pointed Play ticket stays everywhere else; only the hero pair uses this. */
+.hero__cta { gap: 18px; }
+.hero__cta .btn { position: relative; isolation: isolate; min-width: 224px; padding: 16px 38px; border: 0; border-radius: 999px; clip-path: none; text-align: center; line-height: 1.2; font-size: 1.2rem; }
+.hero__cta .btn--play { background: #fff; color: #fff; box-shadow: 0 5px 0 var(--play-green-dark); }
+.hero__cta .btn--play::before { inset: 3px; border-radius: 999px; clip-path: none; background: var(--play-green); }
+.hero__cta .btn--play::after { inset: 8px; border: 2px dashed rgba(255, 255, 255, .9); border-radius: 999px; background: none; }
+.hero__cta .btn--cream { background: var(--cream); color: var(--brown-dark); border: 3px solid #fff; padding: 13px 35px; box-shadow: 0 5px 0 rgba(58, 34, 22, .3); }
+.hero__cta .btn--cream::after { content: ""; position: absolute; inset: 5px; border: 2px dashed var(--stitch); border-radius: 999px; pointer-events: none; }
+.hero__cta .btn:hover { transform: translateY(-2px); }
+.hero__cta .btn:active { transform: translateY(2px); box-shadow: 0 2px 0 rgba(58, 34, 22, .3); }
+@media (max-width: 560px) { .hero__cta .btn { min-width: 240px; } }
