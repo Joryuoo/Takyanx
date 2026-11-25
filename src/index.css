@@ -295,3 +295,17 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 400; line-height: 1.
 .skill__note { font-size: .88rem; opacity: .92; }
 .skills__foot { text-align: center; color: var(--brown-dark); margin: 20px auto 0; max-width: 56ch; font-size: .95rem; }
 @media (max-width: 560px) { .skill { grid-template-columns: 1fr; justify-items: start; } .skill__icon { width: 80px; height: 80px; } .skill__key { display: none; } }
+
+/* About cards: hand-placed, deliberately a little off (tilt, drop, size) */
+.features { align-items: start; padding: 14px 0 22px; }
+.features .feature { transform-origin: 50% 20%; }
+.features .feature:nth-child(1) { transform: rotate(-2deg) translateY(10px) scale(1.01); }
+.features .feature:nth-child(2) { transform: rotate(1.4deg) translateY(-10px) scale(.975); }
+.features .feature:nth-child(3) { transform: rotate(-0.9deg) translateY(16px) scale(1.02); }
+.features .feature:nth-child(4) { transform: rotate(2.2deg) translateY(-2px) scale(.985); }
+@media (max-width: 560px) {
+  .features .feature:nth-child(1) { transform: rotate(-1.2deg) translateY(4px); }
+  .features .feature:nth-child(2) { transform: rotate(1deg) translateY(-2px); }
+  .features .feature:nth-child(3) { transform: rotate(-0.8deg) translateY(2px); }
+  .features .feature:nth-child(4) { transform: rotate(1.4deg) translateY(-2px); }
+}
