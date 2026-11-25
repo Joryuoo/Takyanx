@@ -438,3 +438,19 @@ body { overflow-x: clip; }
 /* Header: more room between Download and See it in action */
 .nav__links { gap: 32px; }
 @media (max-width: 420px) { .nav__links { gap: 18px; } }
+
+/* Characters: a quick power-up pulse every few seconds even when nobody hovers. The powered-up
+   art flashes in over the idle art with a small pop; the second character runs half a cycle
+   behind. A real hover or keyboard focus stops the loop and holds the powered-up pose. The
+   global reduced-motion rule at the top of this file switches all of this off. */
+@keyframes power-flash { 0%, 80%, 100% { opacity: 0; } 87% { opacity: 1; } 95% { opacity: 0; } }
+@keyframes power-idle { 0%, 80%, 100% { opacity: 1; } 87% { opacity: 0; } 95% { opacity: 1; } }
+@keyframes power-pop { 0%, 80%, 100% { transform: none; } 87% { transform: scale(1.045) rotate(-1.2deg); } 95% { transform: none; } }
+.mode .character__hover { animation: power-flash 4s ease-in-out 1s infinite; }
+.mode .character__idle { animation: power-idle 4s ease-in-out 1s infinite; }
+.mode .character__art { animation: power-pop 4s ease-in-out 1s infinite; }
+.modes .mode:nth-child(3) .character__hover,
+.modes .mode:nth-child(3) .character__idle,
+.modes .mode:nth-child(3) .character__art { animation-delay: 3s; }
+.character:hover .character__hover, .character:hover .character__idle, .character:hover .character__art,
+.character:focus-visible .character__hover, .character:focus-visible .character__idle, .character:focus-visible .character__art { animation: none; }
