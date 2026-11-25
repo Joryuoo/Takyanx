@@ -4,8 +4,8 @@ import pierre from '../assets/img/pierre-famador.webp'
 export default function Thanks() {
   return (
     <section className="section" id="thanks">
+      <h2 className="section__title">Special thanks</h2>
       <div className="thanks">
-        <h2 className="thanks__title">Special thanks</h2>
         <figure className="thanks__photo">
           <img src={pierre} alt="Pierre Famador II in his art studio" loading="lazy" />
           <figcaption>IG: P.FAMADOR</figcaption>

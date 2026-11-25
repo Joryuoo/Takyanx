@@ -47,10 +47,6 @@ export default function Skills() {
           </article>
         ))}
       </div>
-      <p className="skills__foot">
-        Press the key on PC, or tap the skill on mobile. In a 1v1 you get 3
-        Shagits and 2 Taghoys, with a refill for the last minute.
-      </p>
     </section>
   )
 }
