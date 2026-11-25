@@ -369,3 +369,18 @@ body { overflow-x: clip; }
   .thumbs li { flex: 0 0 38%; scroll-snap-align: start; }
 }
 @media (prefers-reduced-motion: reduce) { .stage__frame { transform: none; } .thumb--on { transform: none; } }
+
+/* "Made at" tag: a little stitched label instead of loose text */
+.tag { display: table; margin: 0 auto 34px; padding: 9px 24px; background: var(--cream); color: var(--brown-dark); border: 2px dashed var(--stitch); border-radius: 999px; box-shadow: 0 4px 0 rgba(58, 34, 22, .25); font-size: 1rem; line-height: 1.4; text-align: center; transform: rotate(-.8deg); }
+.tag__label { margin-right: 4px; font-family: var(--font-display); color: var(--pill-orange); }
+@media (max-width: 560px) { .tag { padding: 8px 16px; border-radius: 22px; font-size: .95rem; } }
+@media (prefers-reduced-motion: reduce) { .tag { transform: none; } }
+
+/* Skill cards: natural heights (no empty block under the shorter one), hand-placed like About */
+.skills { align-items: start; padding: 10px 0 14px; }
+.skills .feature:nth-child(1) { transform: rotate(-1deg) translateY(6px); }
+.skills .feature:nth-child(2) { transform: rotate(1.2deg) translateY(-6px); }
+@media (max-width: 560px) {
+  .skills .feature:nth-child(1) { transform: rotate(-.8deg); }
+  .skills .feature:nth-child(2) { transform: rotate(.8deg); }
+}

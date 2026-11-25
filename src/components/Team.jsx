@@ -1,5 +1,4 @@
 import banner from '../assets/img/finalist-banner.webp'
-import pierre from '../assets/img/pierre-famador.webp'
 
 // Mirrors the in-game Team credits screen.
 const TEAM = [
@@ -15,8 +14,8 @@ export default function Team() {
   return (
     <section className="section" id="team">
       <h2 className="section__title">The Interns</h2>
-      <p className="section__lead">
-        Made at Cebu Institute of Technology — University.
+      <p className="tag">
+        <span className="tag__label">Made at</span> Cebu Institute of Technology – University
       </p>
       <ul className="pennants">
         {TEAM.map((m) => (
@@ -34,21 +33,6 @@ export default function Team() {
           </li>
         ))}
       </ul>
-      <div className="thanks">
-        <h3 className="thanks__title">Special thanks</h3>
-        <figure className="thanks__photo">
-          <img src={pierre} alt="Pierre Famador II in his art studio" loading="lazy" />
-          <figcaption>IG: P.FAMADOR</figcaption>
-        </figure>
-        <div className="thanks__text">
-          <p className="thanks__name">Pierre Famador</p>
-          <p>
-            We sincerely thank Mr. Pierre Famador II for allowing us to draw
-            inspiration from his distinctive art style in developing the visual
-            direction of our game.
-          </p>
-        </div>
-      </div>
       <figure className="finalist">
         <img
           src={banner}

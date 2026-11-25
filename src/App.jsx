@@ -8,6 +8,7 @@ import Clips from './components/Clips'
 import Modes from './components/Modes'
 import Skills from './components/Skills'
 import Team from './components/Team'
+import Thanks from './components/Thanks'
 import Footer from './components/Footer'
 
 export default function App() {
@@ -24,6 +25,7 @@ export default function App() {
         <Gallery />
         <Clips />
         <Team />
+        <Thanks />
       </main>
       <Footer />
     </>
