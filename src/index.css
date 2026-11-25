@@ -1,11 +1,14 @@
+/* Both fonts are small WOFF2 subsets (basic Latin plus a few punctuation marks) made from the originals in
+   fonts-src/, so they arrive almost as fast as the CSS and the page does not flash a fallback font.
+   For accented letters, re-subset from fonts-src/ with those characters added. Preloaded in index.html. */
 @font-face {
   font-family: 'Permanent Marker';
-  src: url('/fonts/PermanentMarker-Regular.ttf') format('truetype');
+  src: url('/fonts/PermanentMarker-Regular.woff2') format('woff2');
   font-display: swap;
 }
 @font-face {
   font-family: 'Crayon Libre';
-  src: url('/fonts/CrayonLibre-Regular.ttf') format('truetype');
+  src: url('/fonts/CrayonLibre-Regular.woff2') format('woff2');
   font-display: swap;
 }
 
@@ -320,7 +323,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 400; line-height: 1.
 /* Gallery: a treadmill of screenshots. The track holds the list twice and slides left by exactly
    one list (half its width, plus half the gap), so the loop never shows a seam. */
 body { overflow-x: clip; }
-.marquee { overflow: hidden; margin: 24px calc(50% - 50vw) 0; padding: 26px 0 18px;
+.marquee { overflow: hidden; margin: 24px 0 0; padding: 26px 0 18px;
   -webkit-mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent);
   mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent); }
 .marquee__track { display: flex; gap: 28px; width: max-content; animation: marquee 75s linear infinite; will-change: transform; }
@@ -537,3 +540,8 @@ body { overflow-x: clip; }
     filter: drop-shadow(0 6px 8px rgba(58, 34, 22, .4)); animation: float 4s ease-in-out infinite; }
 }
 @media (max-width: 380px) { .modes__takyan-in-card { top: 16px; right: 20px; height: 100px; } }
+
+/* A section that runs edge to edge (the screenshot strip). It fills the page width itself, so there is
+   no 100vw trick: 100vw includes the scrollbar and made the page wiggle sideways by a few pixels. */
+.section--bleed { max-width: none; padding-inline: 0; }
+.section--bleed > .section__title, .section--bleed > .section__lead { padding-inline: 16px; }
