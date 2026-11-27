@@ -11,37 +11,30 @@ const PHOTOS = [
   {
     src: championSlide,
     alt: 'A slide reading Takyan X by The Interns, Next Level: Esports Game Dev Challenge, Grand Champion',
-    caption: 'Takyan X by The Interns: Grand Champion of the Next Level: Esports Game Dev Challenge',
   },
   {
     src: championPoster,
     alt: 'The Takyan X team holding a Grand Winner prize check of 25,000 pesos and the Takyan X poster, on a Takyan X Champion graphic',
-    caption: 'The team with the Grand Winner prize and the Takyan X poster',
   },
   {
     src: teamEvent,
     alt: 'The team and guests standing together at the event in matching event shirts',
-    caption: 'At the event with DOST Central Visayas',
   },
   {
     src: nationalRep,
     alt: 'A group on stage in front of the Level Up 3.0 screen, with a headline graphic dated November 27, 2026',
-    caption: 'CIT-University once again represents Central Visayas in the national game development challenge (November 27, 2026)',
   },
   {
     src: boothMenu,
     alt: 'A tablet on a table showing the Takyan X main menu with Play, Credits, Settings and Quit',
-    caption: 'Takyan X on a tablet at the exhibit booth',
   },
   {
     src: boothVisitor,
     alt: 'A visitor playing Takyan X on a tablet at the exhibit, with the Takyan banner in the background',
-    caption: 'Visitors trying the game at the exhibit',
   },
   {
     src: iconShowcase,
     alt: 'Imaginators Convention 2026 graphic of The Interns, showing the Takyan X poster with a takyan and a boy kicking it, Sipa!',
-    caption: 'The Interns at Imaginators Convention 2026',
   },
 ]
 
@@ -108,11 +101,8 @@ export default function Press() {
       <h2 className="press__heading">Photos</h2>
       <div className="press-grid">
         {PHOTOS.map((p) => (
-          <figure className="shot" key={p.caption}>
+          <figure className="shot" key={p.src}>
             <img src={p.src} alt={p.alt} loading="lazy" />
-            <figcaption>
-              {p.caption}
-            </figcaption>
           </figure>
         ))}
       </div>
