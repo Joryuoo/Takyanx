@@ -1,5 +1,7 @@
 import pierre from '../assets/img/pierre-famador.webp'
 
+const PIERRE_URL = 'https://cargocollective.com/pierrefamador'
+
 // Wording follows the in-game Special Thanks credits page.
 export default function Thanks() {
   return (
@@ -11,9 +13,17 @@ export default function Thanks() {
           <figcaption>IG: P.FAMADOR</figcaption>
         </figure>
         <div className="thanks__text">
-          <p className="thanks__name">Pierre Famador</p>
+          <p className="thanks__name">
+            <a href={PIERRE_URL} target="_blank" rel="noreferrer noopener">
+              Pierre Famador
+            </a>
+          </p>
           <p>
-            We sincerely thank Mr. Pierre Famador II for allowing us to draw
+            We sincerely thank Mr.{' '}
+            <a href={PIERRE_URL} target="_blank" rel="noreferrer noopener">
+              Pierre Famador II
+            </a>{' '}
+            for allowing us to draw
             inspiration from his distinctive art style in developing the visual
             direction of our game.
           </p>
