@@ -4,6 +4,7 @@ import teamEvent from '../assets/img/press/team-event.webp'
 import nationalRep from '../assets/img/press/national-rep.webp'
 import boothMenu from '../assets/img/press/booth-menu.webp'
 import boothVisitor from '../assets/img/press/booth-visitor.webp'
+import iconShowcase from '../assets/img/press/icon-showcase.webp'
 
 // Captions only say what each photo shows or what its own graphic says.
 const PHOTOS = [
@@ -36,6 +37,11 @@ const PHOTOS = [
     src: boothVisitor,
     alt: 'A visitor playing Takyan X on a tablet at the exhibit, with the Takyan banner in the background',
     caption: 'Visitors trying the game at the exhibit',
+  },
+  {
+    src: iconShowcase,
+    alt: 'Imaginators Convention 2026 graphic of The Interns, showing the Takyan X poster with a takyan and a boy kicking it, Sipa!',
+    caption: 'The Interns at Imaginators Convention 2026',
   },
 ]
 
@@ -71,6 +77,13 @@ const LINKS = [
     title: 'Taking the schoolyard classic straight to the digital arena!',
     date: 'September 13',
     url: 'https://www.facebook.com/watch/?v=1447037280688478',
+  },
+  {
+    outlet: 'Instagram · Wildcats PlayLab',
+    title: 'GAMEDEV SHOWCASE | Takyan X by The Interns',
+    date: 'September 5',
+    note: 'Introduces Takyan X and its student developers.',
+    url: 'https://www.instagram.com/p/Dc4WEJUAZPQ/',
   },
   {
     outlet: 'Facebook · The Minkay Life',
