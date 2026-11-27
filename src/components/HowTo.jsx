@@ -42,6 +42,11 @@ export default function HowTo() {
                 The host presses <strong>Play</strong> once everyone is in.
               </li>
             </ol>
+            <p className="howto__tip">
+              <strong>Not in the same place?</strong> Friends in different places can still play together: join the
+              same virtual network with a VPN app like <strong>Radmin VPN</strong> or <strong>ZeroTier</strong>, then
+              follow the steps above.
+            </p>
           </div>
         </article>
       </div>
