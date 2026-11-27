@@ -2,6 +2,7 @@ import Nav from './components/Nav'
 import Hero from './components/Hero'
 import QrSection from './components/QrSection'
 import Downloads from './components/Downloads'
+import HowTo from './components/HowTo'
 import About from './components/About'
 import Gallery from './components/Gallery'
 import Clips from './components/Clips'
@@ -19,6 +20,7 @@ export default function App() {
         <Hero />
         <QrSection />
         <Downloads />
+        <HowTo />
         <Modes />
         <Skills />
         <About />
