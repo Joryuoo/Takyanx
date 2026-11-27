@@ -48,7 +48,7 @@ const SHOTS = [
 
 export default function Gallery() {
   return (
-    <section className="section" id="in-game">
+    <section className="section section--bleed" id="in-game">
       <h2 className="section__title">In the game</h2>
       <p className="section__lead">Screenshots from the game itself.</p>
       {/* The list is rendered twice so the row can loop with no seam; the copy is hidden from

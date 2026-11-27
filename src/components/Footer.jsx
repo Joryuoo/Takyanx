@@ -9,6 +9,8 @@ export default function Footer() {
       <img src={interns} alt="The Interns" className="footer__interns" />
       <p>Takyan X by The Interns · Cebu Institute of Technology – University</p>
       <p className="footer__small">
+        <a href="#/press">Press &amp; events</a>
+        {' · '}
         <a href={REPO_URL} target="_blank" rel="noreferrer">
           Source on GitHub
         </a>

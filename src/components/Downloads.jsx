@@ -17,6 +17,13 @@ export default function Downloads() {
                 {d.file} · {d.size}
               </p>
               <p className="card__note">{d.note}</p>
+              {d.disclaimer && (
+                <p className="card__disclaimer">
+                  <strong>Note:</strong> <strong>{d.disclaimer.game}</strong> is the playable game, while{' '}
+                  <strong>{d.disclaimer.tracker}</strong> is the app that lets you view other players’ games in
+                  esports view.
+                </p>
+              )}
               <a
                 className="btn btn--play"
                 href={d.url}
