@@ -47,7 +47,7 @@ const PHOTOS = [
 
 // Only the Manila Times page was read in full. The Cebu Daily News headline comes from its link
 // (the site refused my request), and the blog entry is shown by its page title. The Facebook
-// pages need a login, so they are listed as plain links.
+// entries are described from screenshots of the posts.
 const LINKS = [
   {
     outlet: 'The Manila Times',
@@ -66,9 +66,25 @@ const LINKS = [
     title: 'Imaginators Convention (ICon) 2026',
     url: 'https://cebu-upcomingeventscebu.blogspot.com/2026/09/blog-post_145.html',
   },
-  { outlet: 'Facebook', title: 'Facebook post', url: 'https://www.facebook.com/share/p/1JDv4Vh5DA/' },
-  { outlet: 'Facebook', title: 'Facebook video', url: 'https://www.facebook.com/watch/?v=1447037280688478' },
-  { outlet: 'Facebook', title: 'Facebook post', url: 'https://www.facebook.com/share/p/1EVWh8h2Qd/' },
+  {
+    outlet: 'Facebook · DOST Central Visayas',
+    title: 'Relive the good old days of playing “Takyan”',
+    note: 'On Takyan X and the young developers from CIT-University representing Central Visayas at Level Up 3.0 during NSTW 2026.',
+    url: 'https://www.facebook.com/share/p/1JDv4Vh5DA/',
+  },
+  {
+    outlet: 'Facebook · Wildcats PlayLab',
+    title: 'Taking the schoolyard classic straight to the digital arena!',
+    date: 'September 13',
+    url: 'https://www.facebook.com/watch/?v=1447037280688478',
+  },
+  {
+    outlet: 'Facebook · The Minkay Life',
+    title: 'Cebu’s gaming & creative scene is leveling up',
+    date: 'September 12',
+    note: 'A visitor’s write-up of ICon 2026 at SM Seaside City Cebu, with Takyan X among the student games.',
+    url: 'https://www.facebook.com/share/p/1Gur44nD1g/',
+  },
 ]
 
 export default function Press() {
