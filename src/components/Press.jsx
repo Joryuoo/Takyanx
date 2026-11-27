@@ -6,7 +6,7 @@ import boothMenu from '../assets/img/press/booth-menu.webp'
 import boothVisitor from '../assets/img/press/booth-visitor.webp'
 import iconShowcase from '../assets/img/press/icon-showcase.webp'
 
-// Captions only say what each photo shows or what its own graphic says.
+// Photos carry no visible captions; the alt text describes each one for screen readers.
 const PHOTOS = [
   {
     src: championSlide,
