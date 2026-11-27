@@ -545,3 +545,7 @@ body { overflow-x: clip; }
    no 100vw trick: 100vw includes the scrollbar and made the page wiggle sideways by a few pixels. */
 .section--bleed { max-width: none; padding-inline: 0; }
 .section--bleed > .section__title, .section--bleed > .section__lead { padding-inline: 16px; }
+
+/* Note under the PC download: which file is the game and which is the tracker */
+.card__disclaimer { margin: 0 0 18px; padding: 10px 14px; font-size: .92rem; line-height: 1.5; background: rgba(242, 106, 31, .12); border-left: 4px solid var(--pill-orange); border-radius: 0 10px 10px 0; }
+.card__disclaimer strong { color: var(--brown-dark); }
